@@ -3,18 +3,27 @@
 
 async function sliderImage() {
     const div = document.getElementById("imageSlider");
-    const api_url = `http://comicvine.gamespot.com/api/characters/?api_key=7c2192ec41cd4b66a7bd80c9915a0ffed53d33cb&limit=5&format=json`;
+    const id_1 = getRandom();
+    const id_2 = getRandom();
+    const id_3 = getRandom();
+    console.log(id_1, id_2, id_3);
+    const api_url = `https://superheroapi.com/api/c5c0b8730b9f3fb24591704b08e84b84/${id_1}`;
     await fetch(api_url)
     .then(res => res.json())
     .then(data => {
         console.log(data);
-        data.results.forEach((item) => {
-            let image = document.createElement("img");
-            image.src = item.image;
-            image.width = 612;
-            image.height = 612;
-            div.appendChild(image);
-        })
+        let image = document.createElement("img");
+        image.src = data.image;
+        image.width = 612;
+        image.height = 612;
+        div.appendChild(image);
+        // data.results.forEach((item) => {
+        //     let image = document.createElement("img");
+        //     image.src = item.image;
+        //     image.width = 612;
+        //     image.height = 612;
+        //     div.appendChild(image);
+        // })
     })
     simpleslider.getSlider();
 }
@@ -26,6 +35,8 @@ async function sliderImage() {
 
 // }
 
-// function getRandom() {
-
-// }
+function getRandom() {
+    min = 1;
+    max = 731;
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
