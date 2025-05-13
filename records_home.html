@@ -1,8 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="records.css">
+        <script src="records_home.js" defer></script>
     </head>
-    <body>
+    <body onload="sliderImage()">
         <h1 id="titleText">The Watcher's Records</h1>
         <nav id = "main-nav">
             <ul>
@@ -11,8 +12,21 @@
                 <li><a href="records_about.html">ABOUT</a></li>
             </ul>
         </nav>
-        <h2>Featured Characters</h2>
-        
-        <h2>Featured Comics</h2>
+        <br>
+        <div id = "imageSlider" style="width:612px; height:612px" data-simple-slider>
+        </div>
+        <br>
+        <!-- <div class="main-container">
+            <h2>Featured Characters</h2>
+                <div class="container-box">
+                    <h3>Daredevil</h3>
+                    <div class="image-container">
+                        
+                    </div>
+                </div>
+            <h2>Featured Comics</h2>
+        </div> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
     </body>
 </html>
