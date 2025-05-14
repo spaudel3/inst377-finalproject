@@ -7,7 +7,8 @@ async function sliderImage() {
     const id_2 = getRandom();
     const id_3 = getRandom();
     console.log(id_1, id_2, id_3);
-    const api_url = `https://superheroapi.com/api/c5c0b8730b9f3fb24591704b08e84b84/${id_1}`;
+
+    const api_url = `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/c5c0b8730b9f3fb24591704b08e84b84/${id_1}`;
     await fetch(api_url)
     .then(res => res.json())
     .then(data => {
