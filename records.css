@@ -36,3 +36,10 @@
     list-style-type: none;
     display:inline-block;
 }
+
+#imageSlider {
+    margin-bottom:5px;
+    margin-left: 425px;
+    text-align: center;
+    border:2px solid;
+}

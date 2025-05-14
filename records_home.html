@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="records.css">
         <script src="records_home.js" defer></script>
     </head>
-    <body onload="sliderImage()">
+    <body>
         <h1 id="titleText">The Watcher's Records</h1>
         <nav id = "main-nav">
             <ul>
@@ -13,9 +13,21 @@
             </ul>
         </nav>
         <br>
-        <div id = "imageSlider" style="width:612px; height:612px" data-simple-slider>
+        <div id = "imageSlider" style="width:640px; height:360px" data-simple-slider>
+            <img src="https://preview.redd.it/full-monster-hunter-wilds-box-art-textless-v0-nyzly6nl8uqd1.png?width=640&crop=smart&auto=webp&s=b58b0581ffecaaa98e60c407545c3ce5f668e8ac">
+            <img src="https://preview.redd.it/anybody-knows-if-this-pic-is-available-in-4k-resol-v0-j080gprxvx5d1.jpeg?width=640&crop=smart&auto=webp&s=a5dde688847cfa86b4f070ce47067bdd99bbe75b">
+            <img src="https://cdn.vox-cdn.com/thumbor/Ihi-U9RXbjEmiMAPe4_4k5pXnq8=/0x0:1920x1080/640x360/cdn.vox-cdn.com/uploads/chorus_image/image/73405004/monster_hunter_rise.0.jpg">
         </div>
         <br>
+        <div id="popularContainer">
+            <h2>The Most Popular Monster is:</h2>
+            <h1 id="popMonster">hi</h1>
+        </div>
+        <br>
+        <div id="userSubmit">
+            <h2>Vote For Your Favorite Monster Below!:</h2>
+            
+        </div>
         <!-- <div class="main-container">
             <h2>Featured Characters</h2>
                 <div class="container-box">
@@ -28,5 +40,13 @@
         </div> -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <script>
+            simpleslider.getSlider({
+                container: document.getElementById('imageSlider'),
+                transitionTime:1,
+                delay:3.5
+            });
+            
+        </script>
     </body>
 </html>
