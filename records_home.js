@@ -1,3 +1,19 @@
+async function createUser() {
+    await fetch(`/user`, {
+        method: 'POST',
+        body: JSON.stringify({
+            firstName: `${document.getElementById('firstName').value}`,
+            lastName: `${document.getElementById('lastName').value}`,
+            favMonster: `${document.getElementById('favMonster').value}`
+        }),
+        headers: {
+            'content-type': 'application/json'
+        },
+    }).then((result) => result.json());
+}
+
+// need function that takes the user's response and returns most voted monster, but idk if that would be here or in index.js
+
 // const api_key = "http://comicvine.gamespot.com/api/character/4005-24694/?api_key=7c2192ec41cd4b66a7bd80c9915a0ffed53d33cb"
 // using superhero api instead now, api key is: c5c0b8730b9f3fb24591704b08e84b84
 

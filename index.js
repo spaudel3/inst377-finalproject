@@ -15,6 +15,10 @@ const supabaseUrl = 'https://tdhnnczikumtzywdgdsq.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRkaG5uY3ppa3VtdHp5d2RnZHNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxNTk0NjEsImV4cCI6MjA2MjczNTQ2MX0.DMWY9CV-lZnvFYrCmjiGw91aOIfBHFLjkOq_bdP5ufA';
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
+app.get('/', (req, res) => {
+    res.sendFile('records_home.html', { root: __dirname });
+});
+
 app.get('/users', async (req, res) => {
     console.log('Attempting to GET all users!');
 

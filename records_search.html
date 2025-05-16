@@ -1,9 +1,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="records.css">
+        <script src="records_search.js" defer></script>
     </head>
     <body>
-        <h1 id="titleText">The Watcher's Records</h1>
+        <h1 id="titleText">The Hunter's Records</h1>
         <nav id = "main-nav">
             <ul>
                 <li><a href="records_home.html">HOME</a></li>
@@ -12,5 +13,69 @@
             </ul>
         </nav>
 
+        <div id="searchBox">
+            <input type="text" id="searchInput" required>
+            <br>
+            <select name="item_type" id="itemType">
+                <option value="monster">Monster</option>
+                <option value="weapon">Weapon</option>
+            </select>
+            <br>
+            <input type="submit" value="Search" onsubmit="return false" onclick="searchRequest()">
+        </div>
+        <!-- <h1 id="waitingText">Please wait while we load your search</h1> -->
+        <br>
+        <div id="main-container">
+        </div>
+        <br>
+        <div id="searchInstruction">
+            <h1>How to Use!</h1>
+            <h2>Look up a monster from the game "Monster Hunter World" and get a list!
+                Click on the monster's names to see more information about them!
+                Only monsters from World work, so no results will be returned if the input isn't valid!
+            </h2>
+        </div>
+
+        <div class="audio-instructions">
+            <h1>On this search page you can look up your monster using Audio!</h1>
+            <p>Ensure your mic is enabled to be able to use this feature</p>
+            <ul>
+                <li>Return Monster Results</li>
+                <ul><li>Say: <b>Lookup: (monster name)</b></li></ul>
+                <li>Change the Page Color</li>
+                <ul><li>Say: <b>Change the color to (color)</b></li></ul>
+                <li>Say Hello Back to you!</li>
+                <ul><li>Say: <b>Hello</b></li></ul>
+            </ul>
+            <div class="listening-buttons">
+                <input type="button" id="startListen" value="Turn on Listening">
+                <input type="button" id="stopListen" value="Turn off Listening">
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script>
+            const startButton = document.getElementById("startListen");
+            const stopButton = document.getElementById("stopListen");
+            startButton.addEventListener('click', function whenListening(){
+                if (annyang) {
+                    const commands = {
+                        'hello': () => { alert('Hello world!'); },
+                        'change the color to *tag': (color) => {document.body.style.backgroundColor = color;},
+                        'lookup *tag': (monster) => {
+                            document.getElementById("searchInput").value = monster;
+                            // call function that loads api data here
+                        }
+                    }
+                    annyang.addCommands(commands);
+                    annyang.start();
+                }
+                console.log('Now listening');
+            });
+
+            stopButton.addEventListener('click', function stopListening(){
+                annyang.abort();
+            })
+        </script>
     </body>
 </html>
