@@ -1,5 +1,5 @@
 async function createUser() {
-    await fetch(`/user`, {
+    await fetch(`https://localhost:3000/user`, {
         // try using the url like this https://localhost
         method: 'POST',
         body: JSON.stringify({
@@ -15,6 +15,15 @@ async function createUser() {
         result.json()
         console.log(result.json())
     });
+}
+
+async function getFavorites() {
+    await fetch(`/user`)
+    .then((result) => result.json())
+    .then((resultJson) => {
+        console.log(resultJson);
+        
+    })
 }
 
 // need function that takes the user's response and returns most voted monster, but idk if that would be here or in index.js

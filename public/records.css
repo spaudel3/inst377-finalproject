@@ -43,3 +43,14 @@
     text-align: center;
     border:2px solid;
 }
+
+.audio-instructions {
+    background-color:black;
+    color:beige;
+    border:2px solid black;
+    float:center;
+    width:60%;
+    margin:auto;
+    padding:5px;
+  }
+

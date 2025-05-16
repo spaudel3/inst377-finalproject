@@ -6,7 +6,6 @@ dotenv.config();
 
 const app = express();
 const port = 3000;
-
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 // const supabaseUrl = process.env.SUPABASE_URL;
@@ -16,7 +15,7 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
-    res.sendFile('records_home.html', { root: __dirname });
+    res.sendFile('public/records_home.html', { root: __dirname });
 });
 
 app.get('/users', async (req, res) => {
@@ -28,9 +27,10 @@ app.get('/users', async (req, res) => {
         console.log(`Error: ${error}`);
         res.statusCode = 500;
         res.send(error);
+    } else {
+        res.send(data);
     }
-
-    res.send(data)
+    
 });
 
 app.post('/user', async (req, res) => {
