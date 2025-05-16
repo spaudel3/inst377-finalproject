@@ -1,15 +1,20 @@
 async function createUser() {
     await fetch(`/user`, {
+        // try using the url like this https://localhost
         method: 'POST',
         body: JSON.stringify({
-            firstName: `${document.getElementById('firstName').value}`,
-            lastName: `${document.getElementById('lastName').value}`,
-            favMonster: `${document.getElementById('favMonster').value}`
+            firstName: `${document.getElementById("firstName").value}`,
+            lastName: `${document.getElementById("lastName").value}`,
+            favMonster: `${document.getElementById("favMonster").value}`
         }),
         headers: {
             'content-type': 'application/json'
         },
-    }).then((result) => result.json());
+        
+    }).then((result) => {
+        result.json()
+        console.log(result.json())
+    });
 }
 
 // need function that takes the user's response and returns most voted monster, but idk if that would be here or in index.js

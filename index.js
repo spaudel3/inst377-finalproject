@@ -57,4 +57,5 @@ app.post('/user', async (req, res) => {
 
 app.listen(port, () => {
     console.log('App is active on port', port);
+    console.log(`Server running on http://localhost:${port}`);
 });

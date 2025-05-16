@@ -59,6 +59,9 @@ async function searchRequest() {
         itemList[0].ailments.forEach((item) => {
             ailments.append(`${item.name}, `);
             console.log(ailments);
+            // string join function to join elements using comma
+            // pop the last two characters
+            
             // figure out how to get rid of extra comma and space at the end later
             // if (ailments.endsWith(", ")) {
             //     ailments = ailments.slice(0, -1);
