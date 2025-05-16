@@ -1,6 +1,8 @@
+const host = window.location.origin;
+console.log(host);
+
 async function createUser() {
-    await fetch(`https://localhost:3000/user`, {
-        // try using the url like this https://localhost
+    await fetch(`${host}/user`, {
         method: 'POST',
         body: JSON.stringify({
             firstName: `${document.getElementById("firstName").value}`,
@@ -18,7 +20,7 @@ async function createUser() {
 }
 
 async function getFavorites() {
-    await fetch(`/user`)
+    await fetch(`${host}/user`)
     .then((result) => result.json())
     .then((resultJson) => {
         console.log(resultJson);
