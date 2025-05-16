@@ -20,7 +20,7 @@ async function createUser() {
 }
 
 async function getFavorites() {
-    await fetch(`${host}/user`)
+    await fetch(`${host}/users`)
     .then((result) => result.json())
     .then((resultJson) => {
         console.log(resultJson);
