@@ -39,7 +39,7 @@ app.post('/user', async (req, res) => {
     console.log(req.body);
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
-    const monster = req.body.monster;
+    const monster = req.body.favMonster;
 
     const { data, error } = await supabase
     .from('user')
