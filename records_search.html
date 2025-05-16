@@ -40,8 +40,8 @@
             <h1>On this search page you can look up your monster using Audio!</h1>
             <p>Ensure your mic is enabled to be able to use this feature</p>
             <ul>
-                <li>Return Monster Results</li>
-                <ul><li>Say: <b>Lookup: (monster name)</b></li></ul>
+                <li>Return Search Results</li>
+                <ul><li>Say: <b>Lookup: (monster or weapon name)</b></li></ul>
                 <li>Change the Page Color</li>
                 <ul><li>Say: <b>Change the color to (color)</b></li></ul>
                 <li>Say Hello Back to you!</li>
@@ -62,9 +62,9 @@
                     const commands = {
                         'hello': () => { alert('Hello world!'); },
                         'change the color to *tag': (color) => {document.body.style.backgroundColor = color;},
-                        'lookup *tag': (monster) => {
-                            document.getElementById("searchInput").value = monster;
-                            // call function that loads api data here
+                        'lookup *tag': (item) => {
+                            document.getElementById("searchInput").value = item;
+                            searchRequest();
                         }
                     }
                     annyang.addCommands(commands);
