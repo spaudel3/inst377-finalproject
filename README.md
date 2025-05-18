@@ -55,8 +55,10 @@ which is used to return any monsters from the API database that match the name i
 The second API endpoint used is https://mhw-db.com/weapons?q={"name":"${inputName}"}
 which is used to return any weapons that match the name input by the user.
 The two other API calls made are used to fetch the contents of a table from supabase.
-The first API call, found in createUser: ${host}/user, fetches the table and then posts the user's input from the user form at the bottom of records_home into the table
-The second API call, found in getFavorites: ${host}/users, fetches the table and then iterates through it (alongside another function, mostVoted) in order to find the most common monster from the table and then show it on the home page.
+The first API call, found in createUser: ${host}/user
+fetches the table and then posts the user's input from the user form at the bottom of records_home into the table
+The second API call, found in getFavorites: ${host}/users
+fetches the table and then iterates through it (alongside another function, mostVoted) in order to find the most common monster from the table and then show it on the home page.
 
 Known Bugs and Future Development: There are two main bugs with the application currently that need work.
 The first bug is related to the infoDiv in records_search. When there are multiple objects for a category
