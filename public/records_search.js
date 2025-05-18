@@ -33,6 +33,7 @@ function loadMHAPI() {
 async function searchRequest() {
     const infoDiv = document.getElementById("main-container");
     const itemList = await loadMHAPI();
+    infoDiv.style.visibility = 'visible';
     console.log(itemList);
     console.log(itemList[0]);
     if (itemList.length == 0) {
@@ -59,6 +60,7 @@ async function searchRequest() {
         itemList[0].ailments.forEach((item) => {
             ailments.append(`${item.name}, `);
             console.log(ailments);
+            typeof(ailments);
             // string join function to join elements using comma
             // pop the last two characters
             

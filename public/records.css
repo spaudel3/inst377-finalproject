@@ -1,10 +1,15 @@
+body {
+    background-color:black;
+}
+
 #titleText {
     text-align: center;
+    color:gold;
 }
 
 #main-nav {
-    background-color: black;
-    color:beige;
+    background-color: gold;
+    color:black;
     width:98%;
     padding:10px;
 }
@@ -15,8 +20,8 @@
 }
 
 #main-nav li a:hover{
-    color: black;
-    background-color:beige;
+    color: gold;
+    background-color:black;
 }
 
 #main-nav ul{
@@ -27,7 +32,7 @@
 }
 
 #main-nav li a{
-    color:beige;
+    color:black;
     padding:10px;
     text-decoration: none;
 }
@@ -38,19 +43,168 @@
 }
 
 #imageSlider {
-    margin-bottom:5px;
-    margin-left: 425px;
+    margin: 0 auto;
     text-align: center;
-    border:2px solid;
+    border:5px solid gold;
 }
 
 .audio-instructions {
-    background-color:black;
-    color:beige;
-    border:2px solid black;
+    background-color:gold;
+    color:black;
+    border:5px solid black;
     float:center;
     width:60%;
     margin:auto;
     padding:5px;
   }
 
+#popularContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    row-gap:10px;
+    column-gap:-10px;
+    align-items: center;
+    background-color:gold;
+    color:black;
+    border:5px solid black;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+}
+
+#userSubmit {
+    text-align: center;
+    background-color: gold;
+    color:black;
+    border:5px solid black;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+    margin-bottom: 5px;
+}
+
+#userForm {
+    background-color: black;
+    color:gold;
+    width:50%;
+    margin: auto;
+    padding:5px;
+    border: 2px solid gold;
+}
+
+/* <!-- HTML !-->
+<button class="button-32" role="button">Button 32</button> */
+
+/* CSS */
+#button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 50%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#button-32:not(:disabled):hover,
+#button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+#button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+#searchBox {
+    text-align: center;
+    background-color: gold;
+    color:black;
+    border:5px solid black;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+    margin-top: 10px;
+}
+
+#main-container {
+    visibility: hidden;
+    text-align: center;
+    background-color: gold;
+    color:black;
+    border:5px solid black;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+    margin-top: 10px;
+}
+
+#searchInstruction {
+    text-align: center;
+    background-color: gold;
+    color:black;
+    border:5px solid black;
+    width: 50%;
+    margin:auto;
+    padding:5px;
+    margin-top: 10px;
+}
+
+/* <!-- HTML !-->
+<button class="button-40" role="button">Button 40</button> */
+
+/* CSS */
+#button-40 {
+  background-color: #111827;
+  margin-top: 5px;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: gold;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+#button-40:hover {
+  background-color: #374151;
+}
+
+#button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  #button-40 {
+    padding: .75rem 1.5rem;
+  }
+}

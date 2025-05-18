@@ -26,7 +26,7 @@
         <br>
         <div id="userSubmit">
             <h2>Vote For Your Favorite Monster Below!:</h2>
-            <form onsubmit="createUser(); return false;">
+            <form id="userForm" onsubmit="createUser(); return false;">
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName">
                 <br>
@@ -36,8 +36,7 @@
                 <label for="favMonster">Favorite Monster::</label>
                 <input type="text" id="favMonster">
                 <br>
-                <br>
-                <input type="submit" name="Add User">
+                <input id="button-32" type="submit" name="Add User">
             </form>
         </div>
         <!-- <div class="main-container">
