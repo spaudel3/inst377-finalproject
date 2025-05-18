@@ -13,7 +13,8 @@
             </ul>
         </nav>
 
-        <div id="searchBox">
+        <div id="flex-container">
+            <div id="searchBox">
             <input type="text" id="searchInput" required>
             <br>
             <select name="item_type" id="itemType">
@@ -22,33 +23,34 @@
             </select>
             <br>
             <input id = "button-40" type="submit" value="Search" onsubmit="return false" onclick="searchRequest()">
-        </div>
-        <br>
-        <div id="main-container">
-        </div>
-        <br>
-        <div id="searchInstruction">
-            <h1>How to Use!</h1>
-            <h2>Look up a monster or weapon from the game "Monster Hunter World" and get a result!
-                You can choose between monster or weapon search with the drop-down menu!
-                Only monsters and weapons from World work, so no results will be returned if the input isn't valid!
-            </h2>
-        </div>
+            </div>
+            <br>
+            <div id="main-container">
+            </div>
+            <br>
+            <div id="searchInstruction">
+                <h1>How to Use!</h1>
+                <h2>Look up a monster or weapon from the game "Monster Hunter World" and get a result!
+                    You can choose between monster or weapon search with the drop-down menu!
+                    Only monsters and weapons from World work, so no results will be returned if the input isn't valid!
+                </h2>
+            </div>
 
-        <div class="audio-instructions">
-            <h1>On this search page you can look up your monster using Audio!</h1>
-            <p>Ensure your mic is enabled to be able to use this feature</p>
-            <ul>
-                <li>Return Search Results</li>
-                <ul><li>Say: <b>Lookup: (monster or weapon name)</b></li></ul>
-                <li>Change the Page Color</li>
-                <ul><li>Say: <b>Change the color to (color)</b></li></ul>
-                <li>Say Hello Back to you!</li>
-                <ul><li>Say: <b>Hello</b></li></ul>
-            </ul>
-            <div class="listening-buttons">
-                <input type="button" id="startListen" value="Turn on Listening">
-                <input type="button" id="stopListen" value="Turn off Listening">
+            <div class="audio-instructions">
+                <h1>On this search page you can look up your monster using Audio!</h1>
+                <p>Ensure your mic is enabled to be able to use this feature</p>
+                <ul>
+                    <li>Return Search Results</li>
+                    <ul><li>Say: <b>Lookup: (monster or weapon name)</b></li></ul>
+                    <li>Change the Page Color</li>
+                    <ul><li>Say: <b>Change the color to (color)</b></li></ul>
+                    <li>Say Hello Back to you!</li>
+                    <ul><li>Say: <b>Hello</b></li></ul>
+                </ul>
+                <div class="listening-buttons">
+                    <input type="button" id="startListen" value="Turn on Listening">
+                    <input type="button" id="stopListen" value="Turn off Listening">
+                </div>
             </div>
         </div>
 
